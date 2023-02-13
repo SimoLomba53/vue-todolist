@@ -14,6 +14,10 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <script type="text/javascript" src="/js/main.js" defer></script>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
  <div id="app">
@@ -26,15 +30,19 @@
     </nav>
     <div class="conteiner">
      <div class="input-group input-group-lg mb-3">
-      <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
+      <input v-model="newText" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username"
         aria-describedby="button-addon2">
       <button class="btn btn-outline-primary" type="button" id="button-addon2">Add Task</button>
      </div>
      <h1>Lista delle tasks</h1>
      <ol class="list-group list-group-numbered">
-        <li class="list-group-item">{{ texts[0] }}</li>
-        <li class="list-group-item">A list item</li>
-        <li class="list-group-item">A list item</li>
+        <li v-for="(text,index) in texts" class="list-group-item"> 
+            {{ texts.text }}
+            <span @click="removeText(index)" class="badge bg-primary rounded-pill ms-auto">
+            <i class="fa fa-times"></i>
+            </span>
+         </li>
+       
     </ol>
     </div>
  </div>

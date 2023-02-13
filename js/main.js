@@ -19,6 +19,14 @@ createApp({
             },
           
             ]
+
+            newText:"",
+        }
+    },
+
+    methods:{
+       removeText(i){
+            this.tasks.splice(i, 1);
         }
     }
 }).mount('#app')
