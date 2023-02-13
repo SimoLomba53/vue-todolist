@@ -3,7 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-          texts:[
+          todo:[
             {
                 text:"lorem ipsum lorem ipsum lorem ipsum",
                 done:true,
@@ -21,11 +21,12 @@ createApp({
             ],
 
             newText: "",
-        }
-    },
 
-    
-     
+           
+        }
+
+        
+    },
 
  
 

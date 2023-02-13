@@ -24,7 +24,7 @@
     <nav class="navbar bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
+                <img src="" alt="Bootstrap" width="30" height="24">
             </a>
         </div>
     </nav>
@@ -41,8 +41,8 @@
      </div>
      <h1>Lista delle tasks</h1>
      <ol class="list-group list-group-numbered">
-        <li id="listitem" v-for="(text,index) in texts" class="list-group-item"> 
-            {{ text }}
+        <li id="listitem" v-for="text in todo" class="list-group-item" > 
+            {{ text.text }}
             <span @click="removeText(index)" class="badge bg-primary rounded-pill ms-auto">
             <i class="fa fa-times"></i>
             </span>
