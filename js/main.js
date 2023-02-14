@@ -44,7 +44,7 @@ createApp({
 
 
        removeText(i){
-            this.tasks.splice(i, 1);
+            this.todo.splice(i, 1);
         },
     
     }

@@ -41,7 +41,7 @@
      </div>
      <h1>Lista delle tasks</h1>
      <ol class="list-group list-group-numbered">
-        <li id="listitem" v-for="text in todo" class="list-group-item" > 
+        <li id="listitem" v-for="(text,index) in todo" class="list-group-item" :class="(text.done) ? 'banned' : '' " > 
             {{ text.text }}
             <span @click="removeText(index)" class="badge bg-primary rounded-pill ms-auto">
             <i class="fa fa-times"></i>
