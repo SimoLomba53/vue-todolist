@@ -31,7 +31,7 @@
     <div class="conteiner">
      <div class="input-group input-group-lg mb-3">
       <input 
-        @keyupenter=""
+        @keyUp.enter="addText()"
         v-model="newText.text" 
         type="text" 
         class="form-control" 
