@@ -20,7 +20,10 @@ createApp({
 
             ],
 
-            newText: "",
+            newText:{
+                text: "",
+                done: false,
+            },
 
            
         }
@@ -39,7 +42,7 @@ createApp({
             done:"to do",
         }
 
-        this.texts.push(this.newText);
+        this.todo.push(this.newText);
        },
 
 

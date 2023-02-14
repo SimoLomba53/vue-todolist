@@ -31,11 +31,12 @@
     <div class="conteiner">
      <div class="input-group input-group-lg mb-3">
       <input 
-        v-model="newText" 
+        @keyupenter=""
+        v-model="newText.text" 
         type="text" 
         class="form-control" 
-        placeholder="Recipient's username" 
-        aria-label="Recipient's username"
+        placeholder="New Text" 
+        aria-label="New Text"
         aria-describedby="button-addon2">
       <button @click="addText" class="btn btn-outline-primary" type="button" id="button-addon2">Add Task</button>
      </div>
